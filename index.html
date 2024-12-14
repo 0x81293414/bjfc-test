@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berkeley Football Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed w-full z-50 border-b border-neutral-800 bg-black/50 backdrop-blur-md">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="flex h-16 items-center justify-between">
+                <a href="/" class="text-2xl font-bold">Berkeley FC</a>
+                <div class="flex space-x-8">
+                    <a href="/" class="hover:text-gray-300">Home</a>
+                    <a href="/teams" class="hover:text-gray-300">Teams</a>
+                    <a href="/admin" class="hover:text-gray-300">Admin</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <section class="hero min-h-screen flex items-center">
+            <div class="max-w-screen-xl mx-auto px-4 text-center">
+                <h1 class="text-6xl font-bold mb-6">Berkeley Minikickers</h1>
+                <p class="text-xl mb-8">Developing young talent through excellence</p>
+                <a href="#learn-more" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full">Join Now</a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
