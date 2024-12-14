@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Berkeley FC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <div class="min-h-screen">
+        <nav class="border-b border-neutral-800 bg-black/50 backdrop-blur-md">
+            <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold">Admin Dashboard</h1>
+                <button id="logoutBtn" class="text-red-500 hover:text-red-400">Logout</button>
+            </div>
+        </nav>
+
+        <main class="max-w-screen-xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Add Team Form -->
+                <div class="bg-neutral-900 p-6 rounded-lg">
+                    <h2 class="text-xl font-bold mb-4">Add New Team</h2>
+                    <form id="addTeamForm">
+                        <input type="text" name="teamName" placeholder="Team Name" required
+                               class="w-full mb-4 p-3 rounded bg-neutral-800">
+                        <textarea name="description" placeholder="Team Description" required
+                                  class="w-full mb-4 p-3 rounded bg-neutral-800"></textarea>
+                        <input type="file" name="teamImage" accept="image/*" required
+                               class="w-full mb-4 p-3 rounded bg-neutral-800">
+                        <button type="submit" 
+                                class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full">
+                            Add Team
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Manage Teams -->
+                <div class="bg-neutral-900 p-6 rounded-lg">
+                    <h2 class="text-xl font-bold mb-4">Manage Teams</h2>
+                    <div id="teamsList" class="space-y-4">
+                        <!-- Teams will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/admin.js"></script>
+</body>
+</html>
